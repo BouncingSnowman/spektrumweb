@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Spektrum skaper nyttige digitale opplevelser.">
+  <link rel="canonical" href="https://spektrumweb.com/">
+  <title>Spektrum</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --ink:#21151d; --plum:#48152c; --rose:#d91568; --paper:#fff; --line:#e6e0e2; --muted:#6f666c; }
+    * { box-sizing:border-box; }
+    body { min-height:100vh; margin:0; background:var(--paper); color:var(--ink); font-family:'DM Sans',system-ui,sans-serif; }
+    a { color:inherit; }
+    .page { width:min(1180px,calc(100% - 48px)); margin:0 auto; }
+    header { display:flex; align-items:center; justify-content:space-between; padding:28px 0; border-bottom:1px solid var(--line); }
+    .brand { font-family:'Space Grotesk',sans-serif; font-size:1.25rem; font-weight:700; letter-spacing:-.05em; text-decoration:none; }
+    .tag { color:var(--muted); font-size:.9rem; }
+    main { padding:clamp(72px,12vw,148px) 0 80px; }
+    .eyebrow { display:inline-flex; align-items:center; gap:10px; color:var(--rose); font-size:.74rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase; }
+    .eyebrow::before { width:30px; height:3px; background:currentColor; content:''; }
+    h1 { max-width:900px; margin:20px 0; font-family:'Space Grotesk',sans-serif; font-size:clamp(3.4rem,8vw,7rem); line-height:.9; letter-spacing:-.075em; }
+    .intro { max-width:650px; margin:0; color:var(--muted); font-size:clamp(1.1rem,2vw,1.35rem); line-height:1.5; }
+    .case { display:grid; grid-template-columns:minmax(0,1fr) minmax(300px,.86fr); gap:36px; align-items:center; margin-top:clamp(70px,11vw,130px); padding:clamp(24px,4vw,48px); overflow:hidden; border:1px solid var(--line); border-radius:28px; text-decoration:none; transition:transform .2s ease, box-shadow .2s ease; }
+    .case:hover { box-shadow:0 20px 50px rgba(50,14,34,.13); transform:translateY(-3px); }
+    .case h2 { margin:14px 0; font-family:'Space Grotesk',sans-serif; font-size:clamp(2rem,4vw,3.6rem); line-height:.96; letter-spacing:-.06em; }
+    .case p { max-width:480px; margin:0; color:var(--muted); font-size:1.08rem; line-height:1.55; }
+    .case-cta { display:inline-block; margin-top:24px; color:var(--plum); font-weight:700; text-underline-offset:5px; }
+    .case img { display:block; width:100%; border-radius:18px; }
+    footer { padding:26px 0 36px; border-top:1px solid var(--line); color:var(--muted); font-size:.84rem; }
+    @media (max-width:720px) { .page { width:min(100% - 32px,1180px); } header { padding:22px 0; } .tag { display:none; } main { padding-top:76px; } .case { grid-template-columns:1fr; gap:28px; border-radius:22px; } .case img { order:-1; } }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <a class="brand" href="./" aria-label="Spektrum hjem">Spektrum</a>
+      <span class="tag">Digitale opplevelser</span>
+    </header>
+    <main>
+      <div class="eyebrow">Spektrum</div>
+      <h1>Digitalt arbeid som er enkelt å bruke.</h1>
+      <p class="intro">Vi lager nettsider og digitale opplevelser som hjelper mennesker med å finne frem, forstå og handle.</p>
+      <a class="case" href="moldejazz/">
+        <div>
+          <div class="eyebrow">Case</div>
+          <h2>Moldejazz</h2>
+          <p>En egen Spektrum-flate for materiell, skisser og samarbeid med Moldejazz.</p>
+          <span class="case-cta">Åpne prosjektsiden →</span>
+        </div>
+        <img src="assets/moldejazz-guide.png" alt="Jazzy, Moldejazz sin digitale guide">
+      </a>
+    </main>
+    <footer>© Spektrum</footer>
+  </div>
+</body>
+</html>

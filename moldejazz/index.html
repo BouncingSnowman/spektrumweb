@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Moldejazz sin festivalassistent Jazzy.">
+  <link rel="canonical" href="https://spektrumweb.com/moldejazz/">
+  <title>Møt Jazzy | Moldejazz festivalassistent</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --ink:#21151d; --plum:#48152c; --rose:#d91568; --paper:#fff; --line:#e4e0dc; --muted:#756c72; }
+    *,*::before,*::after { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:'DM Sans',system-ui,sans-serif; line-height:1.5; }
+    a { color:inherit; }
+    h1 { margin:0; font-family:'Space Grotesk','DM Sans',sans-serif; letter-spacing:-.055em; }
+    .page { width:min(1320px,calc(100% - 48px)); margin:0 auto; }
+    .intro { max-width:840px; padding:40px 0 36px; }
+    .kicker { display:inline-flex; align-items:center; gap:10px; color:var(--rose); font-size:12px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; }
+    .kicker::before { width:28px; height:3px; background:currentColor; content:''; }
+    .intro h1 { margin-top:16px; font-size:clamp(46px,6vw,78px); line-height:.94; }
+    .intro p { max-width:700px; margin:20px 0 0; color:#5d555b; font-size:clamp(17px,2vw,20px); }
+    .guide-card { width:100%; margin:0 auto 72px; padding:0; border-radius:28px; background:transparent; box-shadow:none; }
+    .guide-card-art { position:relative; }
+    .guide-card-art > img { display:block; width:100%; height:auto; border-radius:24px; box-shadow:none; }
+    .chat-overlay { position:absolute; z-index:2; left:62%; bottom:4%; display:flex; width:min(36%,560px); height:92%; flex-direction:column; overflow:hidden; border:0; border-radius:24px 24px 10px 24px; background:var(--paper); box-shadow:none; }
+    .chat-frame { display:block; flex:1; width:100%; min-height:0; border:0; background:var(--paper); }
+    .page-links { display:flex; flex-wrap:wrap; justify-content:space-between; gap:18px; padding:24px 0 72px; border-top:1px solid var(--line); color:var(--plum); font-size:14px; font-weight:700; }
+    .page-links a { text-underline-offset:4px; }
+    .page-links a:hover { color:var(--rose); }
+    .credit { padding:18px 0 28px; border-top:1px solid var(--line); color:var(--muted); font-size:12px; }
+    .credit strong { color:var(--plum); font-weight:700; }
+    @media (max-width:680px) { .chat-overlay { position:relative; left:auto; right:auto; bottom:auto; width:min(100%,520px); transform:none; height:520px; margin:-68px auto 0; } }
+    @media (max-width:620px) { .page { width:min(100% - 32px,1320px); } .intro { padding:32px 0 30px; } .intro h1 { font-size:clamp(44px,13vw,66px); } .guide-card { margin-bottom:54px; padding:0; border-radius:20px; } .guide-card-art > img { border-radius:14px; } .chat-overlay { left:auto; width:100%; height:520px; margin:-56px auto 0; border-radius:20px 20px 8px 20px; } .page-links { padding-bottom:52px; } }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="intro">
+      <div class="kicker">Festivalassistenten</div>
+      <h1>Møt Jazzy</h1>
+      <p>Spør om program, artister, billetter eller praktisk informasjon — og finn frem videre på Moldejazz-nettsiden.</p>
+    </section>
+    <section class="guide-card" aria-label="Moldejazz sin festivalassistent">
+      <div class="guide-card-art">
+        <img src="../assets/moldejazz-guide.png" alt="Moldejazz digital guide: Ask about MoldeJazz">
+        <div class="chat-overlay">
+          <iframe class="chat-frame" data-chat-frame title="Moldejazz festivalassistent" src="https://clientrelay.tech/widget/iframe.html?v=1f3fa5f21a2765649257ba7c81e3c92d0b610b44&amp;client=moldejazzweb" loading="eager" allow="microphone" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+      </div>
+    </section>
+    <div class="page-links">
+      <a href="../">← Tilbake til Spektrum</a>
+      <a href="https://www.moldejazz.no/program-billett">Se program og billetter →</a>
+    </div>
+    <div class="credit">Festivalassistent levert av <strong>Spektrum</strong></div>
+  </main>
+  <script>
+    (() => {
+      const chatFrame = document.querySelector('[data-chat-frame]');
+      const initialScroll = window.scrollY;
+      const restoreTop = () => { if (initialScroll <= 4) window.scrollTo(0, 0); };
+      if (chatFrame) chatFrame.addEventListener('load', () => { window.setTimeout(restoreTop, 40); window.setTimeout(restoreTop, 280); }, { once:true });
+    })();
+  </script>
+</body>
+</html>
