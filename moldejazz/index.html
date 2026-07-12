@@ -27,8 +27,10 @@
     .guide-card-art > img { display:block; width:100%; height:auto; border-radius:24px; box-shadow:none; }
     .chat-overlay { position:absolute; z-index:2; left:62%; bottom:4%; display:flex; width:min(36%,560px); height:92%; flex-direction:column; overflow:hidden; border:0; border-radius:24px 24px 10px 24px; background:var(--paper); box-shadow:none; }
     .chat-frame { display:block; flex:1; width:100%; min-height:0; border:0; background:var(--paper); }
+    .chat-credit { position:absolute; z-index:3; left:62%; bottom:1%; width:min(36%,560px); color:#fff; font-size:12px; font-weight:700; text-align:center; text-decoration:none; }
+    .chat-credit:hover { color:#f6d447; text-decoration:underline; text-underline-offset:4px; }
 
-    @media (max-width:680px) { .chat-overlay { position:relative; left:auto; right:auto; bottom:auto; width:min(100%,520px); transform:none; height:520px; margin:-68px auto 0; } }
+    @media (max-width:680px) { .chat-overlay { position:relative; left:auto; right:auto; bottom:auto; width:min(100%,520px); transform:none; height:520px; margin:-68px auto 0; } .chat-credit { position:relative; left:auto; bottom:auto; display:block; width:min(100%,520px); margin:12px auto 0; color:var(--plum); } }
     @media (max-width:620px) { .page { width:min(100% - 32px,1320px); } .intro { padding:32px 0 30px; } .intro h1 { font-size:clamp(44px,13vw,66px); } .guide-card { margin-bottom:40px; padding:0; border-radius:20px; } .guide-card-art > img { border-radius:14px; } .chat-overlay { left:auto; width:100%; height:520px; margin:-56px auto 0; border-radius:20px 20px 8px 20px; } }
   </style>
 </head>
@@ -45,6 +47,7 @@
         <div class="chat-overlay">
           <iframe class="chat-frame" data-chat-frame title="Moldejazz festivalassistent" src="https://clientrelay.tech/widget/iframe.html?v=1f3fa5f21a2765649257ba7c81e3c92d0b610b44&amp;client=moldejazzweb" loading="eager" allow="microphone" referrerpolicy="strict-origin-when-cross-origin"></iframe>
         </div>
+        <a class="chat-credit" href="https://www.spektrum.no/">Chatbot levert av Spektrum</a>
       </div>
     </section>
 
